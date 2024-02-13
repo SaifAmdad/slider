@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-bg {
+  background-image: url("img/Keyboard.jpg");
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  animation: slider 9s linear infinite;
+}
+@keyframes slider {
+  0% {
+    background-image: url("img/Keyboard.jpg");
+  }
+  35% {
+    background-image: url("img/desktop.jpg");
+  }
+  70% {
+    background-image: url("img/laptop.jpg");
+  }
+}
+
+.slider-overlay {
+  background-color: #5b5752cc;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-show-item {
+  position: absolute;
+  text-align: center;
+  transform: scale(0);
+}
+.show {
+  transform: scale(1);
+  transition: 700ms;
+}
+
+.slide-show-item i {
+  font-size: 150px;
+}
+.slide-show-item h2 {
+  margin-top: 15px;
+  font-size: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
